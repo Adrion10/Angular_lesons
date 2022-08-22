@@ -8,4 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Pipes';
   today = Date();
+  capString(item: string) {
+    return item.toUpperCase();
+  }
 }
