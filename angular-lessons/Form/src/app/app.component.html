@@ -1,9 +1,9 @@
 <h1>{{ title }}</h1>
 
 <form #loginForm="ngForm" (ngSubmit)="loginUser(loginForm.value)">
-  <input type="text" name="'name" placeholder="Enter Name" />
+  <input type="text" name="'name" placeholder="Enter Name" ngModel />
   <br /><br />
-  <input type="Password" name="password" placeholder="Enter Password" />
+  <input type="Password" name="password" placeholder="Enter Password" ngModel />
   <br /><br />
   <button>Login</button>
 </form>
