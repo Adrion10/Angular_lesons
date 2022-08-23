@@ -6,9 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'Pipes';
+  title = ' Angular Pipes';
   today = Date();
   capString(item: string) {
     return item.toUpperCase();
   }
+
+  user = {
+    name: 'Lace',
+    age: 41,
+  };
 }
