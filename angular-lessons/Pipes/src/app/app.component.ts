@@ -16,4 +16,5 @@ export class AppComponent {
     name: 'Lace',
     age: 41,
   };
+  title1 = 'Custem Pipes';
 }
