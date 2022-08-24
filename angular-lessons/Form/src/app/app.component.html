@@ -9,7 +9,11 @@
     placeholder="Enter Name"
     ngModel
   />
-  <br /><br />
+  <br /><span *ngIf="name.invalid" style="color: red"
+    >Pleas enter a Valid Input</span
+  ><br />
+
+  <br />
   <input type="Password" name="password" placeholder="Enter Password" ngModel />
   <br /><br />
   <button>Login</button>
