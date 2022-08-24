@@ -10,4 +10,5 @@ export class AppComponent {
   loginUser(item: any) {
     console.log(item);
   }
+  title1="Reactiv Form In Angular"
 }
