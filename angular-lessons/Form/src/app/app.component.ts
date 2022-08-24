@@ -16,4 +16,7 @@ export class AppComponent {
     user: new FormControl(''),
     password: new FormControl(''),
   });
+  loginUser1() {
+    console.log();
+  }
 }

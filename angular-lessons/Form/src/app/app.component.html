@@ -33,7 +33,7 @@
   <button [disabled]="loginForm.invalid">Login</button>
 </form>
 <h1>{{ title1 }}</h1>
-<form [formGroup]="loginForm1">
+<form [formGroup]="loginForm1" (ngSubmit)="loginUser1()">
   <input type="text" placeholder="Enter name" formControlName="user" />
   <br />
   <br />
