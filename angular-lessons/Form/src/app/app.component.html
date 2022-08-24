@@ -9,12 +9,24 @@
     placeholder="Enter Name"
     ngModel
   />
-  <br /><span *ngIf="name.invalid" style="color: red"
+  <br />
+  <span *ngIf="name.invalid && name.touched" style="color: red"
     >Pleas enter a Valid Input</span
   ><br />
 
   <br />
-  <input type="Password" name="password" placeholder="Enter Password" ngModel />
-  <br /><br />
+  <input
+    type="Password"
+    name="password"
+    required
+    #password="ngModel"
+    placeholder="Enter Password"
+    ngModel
+  />
+  <br />
+  <span *ngIf="password.invalid && password.touched" style="color: red"
+    >Pleas enter a Valid Input</span
+  >
+  <br />
   <button>Login</button>
 </form>
