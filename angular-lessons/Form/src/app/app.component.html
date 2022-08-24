@@ -33,11 +33,15 @@
   <button [disabled]="loginForm.invalid">Login</button>
 </form>
 <h1>{{ title1 }}</h1>
-<form>
-  <input type="text" placeholder="Enter name" />
+<form [formGroup]="loginForm1">
+  <input type="text" placeholder="Enter name" formControlName="user" />
   <br />
   <br />
-  <input type="password" placeholder="Enter password" />
+  <input
+    type="password"
+    placeholder="Enter password"
+    formControlName="password"
+  />
   <br />
   <br />
   <button>Login</button>

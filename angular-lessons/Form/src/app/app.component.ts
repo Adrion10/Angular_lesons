@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -10,5 +11,9 @@ export class AppComponent {
   loginUser(item: any) {
     console.log(item);
   }
-  title1="Reactiv Form In Angular"
+  title1 = 'Reactiv Form In Angular';
+  loginForm1 = new FormGroup({
+    user: new FormControl(''),
+    password: new FormControl(''),
+  });
 }
