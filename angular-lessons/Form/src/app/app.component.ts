@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -13,10 +13,13 @@ export class AppComponent {
   }
   title1 = 'Reactiv Form In Angular';
   loginForm1 = new FormGroup({
-    user: new FormControl('Lace'),
-    password: new FormControl('1234'),
+    user: new FormControl('', [Validators.required]),
+    password: new FormControl(''),
   });
   loginUser1() {
     console.log(this.loginForm1.value);
+  }
+  get user() {
+    return this.loginForm1;
   }
 }
