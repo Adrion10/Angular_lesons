@@ -36,9 +36,10 @@
 <form [formGroup]="loginForm1" (ngSubmit)="loginUser1()">
   <input type="text" placeholder="Enter name" formControlName="user" />
   <br />
-  <span style="color: red" *ngIf="user && user.invalid">
+  <span style="color: red" *ngIf="user && user.invalid && user.touched">
     This input filed is not valid
   </span>
+  <br />
   <br />
   <input
     type="password"
