@@ -13,8 +13,8 @@ export class AppComponent {
   }
   title1 = 'Reactiv Form In Angular';
   loginForm1 = new FormGroup({
-    user: new FormControl(''),
-    password: new FormControl(''),
+    user: new FormControl('Lace'),
+    password: new FormControl('1234'),
   });
   loginUser1() {
     console.log(this.loginForm1.value);
