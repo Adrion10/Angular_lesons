@@ -13,7 +13,7 @@ export class AppComponent {
   }
   title1 = 'Reactiv Form In Angular';
   loginForm1 = new FormGroup({
-    user: new FormControl('', [Validators.required]),
+    user: new FormControl('', [Validators.required, Validators.email]),
     password: new FormControl(''),
   });
   loginUser1() {
