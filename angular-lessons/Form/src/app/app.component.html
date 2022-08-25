@@ -37,7 +37,7 @@
   <input type="text" placeholder="Enter name" formControlName="user" />
   <br />
   <span style="color: red" *ngIf="user && user.invalid && user.touched">
-    This input filed is not valid
+    User input filed is not valid
   </span>
   <br />
   <br />
@@ -47,6 +47,12 @@
     formControlName="password"
   />
   <br />
+  <span
+    style="color: red"
+    *ngIf="password && password.invalid && password.touched"
+  >
+    Password input filed is not valid
+  </span>
   <br />
-  <button>Login</button>
+  <button [disabled]="loginForm1.invalid">Login</button>
 </form>

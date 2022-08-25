@@ -14,12 +14,15 @@ export class AppComponent {
   title1 = 'Reactiv Form In Angular';
   loginForm1 = new FormGroup({
     user: new FormControl('', [Validators.required, Validators.email]),
-    password: new FormControl(''),
+    password: new FormControl('', [Validators.required]),
   });
   loginUser1() {
     console.log(this.loginForm1.value);
   }
   get user() {
-    return this.loginForm1;
+    return this.loginForm1.get('user');
+  }
+  get password() {
+    return this.loginForm1.get('password');
   }
 }
