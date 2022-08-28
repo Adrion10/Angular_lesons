@@ -28,4 +28,5 @@ export class AppComponent {
   get password() {
     return this.loginForm1.get('password');
   }
+  title2 = 'Directives';
 }
