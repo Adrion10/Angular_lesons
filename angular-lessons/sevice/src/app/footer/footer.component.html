@@ -1,3 +1,8 @@
 <div class="footer">
-  <h1>Footer</h1>
+  <h1>
+    Footer
+    <ul>
+      <li *ngFor="let user of users">{{ user.email }}-</li>
+    </ul>
+  </h1>
 </div>

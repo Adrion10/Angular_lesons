@@ -1,15 +1,17 @@
 import { Component, OnInit } from '@angular/core';
+import { UserdataService } from '../services/userdata.service';
 
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
-  styleUrls: ['./footer.component.css']
+  styleUrls: ['./footer.component.css'],
 })
 export class FooterComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
+  users: any;
+  constructor(private userData: UserdataService) {
+    console.log(userData.users());
+    this.users = userData.users();
   }
 
+  ngOnInit(): void {}
 }
