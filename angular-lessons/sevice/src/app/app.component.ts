@@ -16,7 +16,10 @@ export class AppComponent {
   ];
   users: any;
   constructor(private userData: UserdataService) {
-    console.log(userData.users());
-    this.users = userData.users();
+    // console.log(userData.users());
+    // this.users = userData.users();
+    this.userData.users().subscribe((data) => {
+      console.log('data', data);
+    });
   }
 }
