@@ -20,6 +20,7 @@ export class AppComponent {
     // this.users = userData.users();
     this.userData.users().subscribe((data) => {
       console.log('data', data);
+      this.users = data;
     });
   }
 }
