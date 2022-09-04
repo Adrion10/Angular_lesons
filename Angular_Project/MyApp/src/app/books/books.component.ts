@@ -10,6 +10,10 @@ export class BooksComponent implements OnInit {
   author: string = 'Robert C Martin';
   src: string =
     'https://images-na.ssl-images-amazon.com/images/W/WEBP_402378-T2/images/I/41xShlnTZTL._SX376_BO1,204,203,200_.jpg';
+
+  name2: string = 'The Pragmatic Programmer';
+  author2: string = 'David THomas';
+  src2: string = 'https://m.media-amazon.com/images/I/518FqJvR9aL.jpg';
   constructor() {}
 
   ngOnInit(): void {}
