@@ -22,5 +22,6 @@ export class BooksComponent implements OnInit {
 
   handleClick() {
     // alert('I¸am working');
+    this.isDisabled = true;
   }
 }
