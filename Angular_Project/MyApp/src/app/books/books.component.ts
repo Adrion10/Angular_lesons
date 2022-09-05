@@ -19,4 +19,8 @@ export class BooksComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  handleClick() {
+    // alert('I¸am working');
+  }
 }
