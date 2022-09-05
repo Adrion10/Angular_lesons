@@ -1,5 +1,11 @@
 <h2>Programming Books List!</h2>
-<button (click)="handleClick()" [disabled]="isDisabled">Show Books</button>
+<button
+  (click)="handleClick()"
+  (mouseover)="handleClick()"
+  [disabled]="isDisabled"
+>
+  Show Books
+</button>
 <ul>
   <!-- <li>
     {{ name }}
