@@ -6,8 +6,10 @@
 >
   Show Books
 </button>
-<input type="text" (input)="handleInput($event)" />
-<p>{{ myName }}</p>
+<!-- <input type="text" (input)="handleInput($event)" /> -->
+<input type="text" [(ngModel)]="myName" />
+
+<div>{{ myName }}</div>
 <ul>
   <!-- <li>
     {{ name }}
