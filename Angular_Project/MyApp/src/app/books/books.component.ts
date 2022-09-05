@@ -24,8 +24,10 @@ export class BooksComponent implements OnInit {
     // alert('I¸am working');
     this.isDisabled = true;
   }
+  myName: string = '';
   handleInput(event: any) {
     // alert('I am working');
-    console.log(event.target.value);
+    // console.log(event.target.value);
+    this.myName = event.target.value;
   }
 }
