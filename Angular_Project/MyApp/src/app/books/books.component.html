@@ -1,16 +1,16 @@
 <h2>Programming Books List!</h2>
-<button
+<!-- <button
   (click)="handleClick()"
   (mouseover)="handleClick()"
   [disabled]="isDisabled"
 >
   Show Books
-</button>
+</button> -->
+<button>Show Books</button>
 <!-- <input type="text" (input)="handleInput($event)" /> -->
-<input type="text" [(ngModel)]="myName" />
-
-<div>{{ myName }}</div>
-<ul>
+<!-- <input type="text" [(ngModel)]="myName" />
+<div>{{ myName }}</div> -->
+<ul ngIf="isShowing">
   <!-- <li>
     {{ name }}
   </li>
