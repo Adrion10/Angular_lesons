@@ -31,4 +31,7 @@ export class BooksComponent implements OnInit {
   //   // console.log(event.target.value);
   //   this.myName = event.target.value;
   // }
+  toggleBooks() {
+    this.isShowing = !this.isShowing;
+  }
 }
