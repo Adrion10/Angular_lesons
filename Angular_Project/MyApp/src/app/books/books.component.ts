@@ -31,10 +31,11 @@ export class BooksComponent implements OnInit {
   //   // console.log(event.target.value);
   //   this.myName = event.target.value;
   // }
-  toggleBooks() {
-    // if isShowing is true, than make it false
-    // or isShowing is false, then make it true
+  // toggleBooks() {
+  //   // if isShowing is true, than make it false
+  //   // or isShowing is false, then make it true
 
-    this.isShowing = !this.isShowing;
-  }
+  //   this.isShowing = !this.isShowing;
+  // }
+  // ky funksion fshihet sepse e kemi zvenendesusar tek click isShowing
 }
