@@ -6,9 +6,11 @@
 >
   Show Books
 </button> -->
-<button (click)="isShowing = !isShowing">Toggle Books</button>
-
-//"toggleBooks()"
+<button (click)="isShowing = !isShowing">
+  <span *ngIf="!isShowing">Show Books</span>
+  <span *ngIf="isShowing">Hide Books</span>
+</button>
+<!-- "toggleBooks()" -->
 
 <!-- <input type="text" (input)="handleInput($event)" /> -->
 <!-- <input type="text" [(ngModel)]="myName" />
