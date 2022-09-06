@@ -32,6 +32,9 @@ export class BooksComponent implements OnInit {
   //   this.myName = event.target.value;
   // }
   toggleBooks() {
+    // if isShowing is true, than make it false
+    // or isShowing is false, then make it true
+
     this.isShowing = !this.isShowing;
   }
 }
