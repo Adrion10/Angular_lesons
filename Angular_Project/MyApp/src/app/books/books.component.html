@@ -26,9 +26,11 @@
   <li>{{ name }} by {{ author }}</li>
   <img src="{{ src2 }}" alt="{{ name2 }}" width="100" />
   <li>{{ name2 }} by {{ author2 }}</li> -->
+  <li *ngFor="let book of books">
+    <img [src]="book.image" [alt]="book.name" width="100" />
+    {{ book.name }} by {{ book.author }}
+  </li>
 
-  <img [src]="src" [alt]="name" width="100" />
-  <li>{{ name }} by {{ author }}</li>
-  <img [src]="src2" [alt]="name2" width="100" />
-  <li>{{ name2 }} by {{ author2 }}</li>
+  <!-- <img [src]="src2" [alt]="name2" width="100" />
+  <li>{{ name2 }} by {{ author2 }}</li> -->
 </ul>

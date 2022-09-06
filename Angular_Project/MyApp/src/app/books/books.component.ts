@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+interface Book {
+  name: string;
+  author: string;
+  image: string;
+}
 
 @Component({
   selector: 'app-books',
@@ -6,14 +11,27 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./books.component.css'],
 })
 export class BooksComponent implements OnInit {
-  name: string = 'Clean Code';
-  author: string = 'Robert C Martin';
-  src: string =
-    'https://images-na.ssl-images-amazon.com/images/W/WEBP_402378-T2/images/I/41xShlnTZTL._SX376_BO1,204,203,200_.jpg';
+  books: Book[] = [
+    {
+      name: 'Clean Code',
+      author: 'Robert C Martin',
+      image:
+        'https://images-na.ssl-images-amazon.com/images/W/WEBP_402378-T2/images/I/41xShlnTZTL._SX376_BO1,204,203,200_.jpg',
+    },
+    {
+      name: 'The Pragmatic Programmer',
+      author: 'David THomas',
+      image: 'https://m.media-amazon.com/images/I/518FqJvR9aL.jpg',
+    },
+  ];
+  // name: string = 'Clean Code';
+  // author: string = 'Robert C Martin';
+  // src: string =
+  //   'https://images-na.ssl-images-amazon.com/images/W/WEBP_402378-T2/images/I/41xShlnTZTL._SX376_BO1,204,203,200_.jpg';
 
-  name2: string = 'The Pragmatic Programmer';
-  author2: string = 'David THomas';
-  src2: string = 'https://m.media-amazon.com/images/I/518FqJvR9aL.jpg';
+  // name2: string = 'The Pragmatic Programmer';
+  // author2: string = 'David THomas';
+  // src2: string = 'https://m.media-amazon.com/images/I/518FqJvR9aL.jpg';
 
   // isDisabled: boolean = false;
   isShowing: boolean = true;
