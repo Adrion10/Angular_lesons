@@ -2,3 +2,10 @@ ul {
   display: flex;
   flex-wrap: wrap;
 }
+.book {
+  list-style: none;
+  width: 25%;
+  text-overflow: ellipsis;
+  text-align: center;
+  cursor: pointer;
+}

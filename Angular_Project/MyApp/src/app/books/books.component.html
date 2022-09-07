@@ -28,11 +28,13 @@
   <li>{{ name2 }} by {{ author2 }}</li> -->
 
   <ng-container *ngFor="let book of books; let i = index">
-    <li>
-      {{ i + 1 }}
+    <li class="book">
+      <p class="sno">{{ i + 1 }}</p>
       <img [src]="book.image" [alt]="book.name" width="100" />
-      {{ book.name | titlecase }} by {{ book.author | titlecase }}
-      <p>{{ book.amount | currency: "EUR" }}</p>
+      <p class="title">
+        {{ book.name | titlecase }} by {{ book.author | titlecase }}
+      </p>
+      <p class="currency">{{ book.amount | currency: "EUR" }}</p>
     </li>
   </ng-container>
   <!-- <img [src]="src2" [alt]="name2" width="100" />
