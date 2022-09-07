@@ -32,7 +32,7 @@
       {{ i + 1 }}
       <img [src]="book.image" [alt]="book.name" width="100" />
       {{ book.name | titlecase }} by {{ book.author | titlecase }}
-      <p>{{ book.amount }}</p>
+      <p>{{ book.amount | currency: "EUR" }}</p>
     </li>
   </ng-container>
   <!-- <img [src]="src2" [alt]="name2" width="100" />
