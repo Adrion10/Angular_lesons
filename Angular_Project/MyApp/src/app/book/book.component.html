@@ -1,0 +1,9 @@
+<li class="book">
+  <!-- <p class="sno">{{ i + 1 }}</p> -->
+  <img [src]="book.image" [alt]="book.name" width="100" />
+  <p class="title">
+    {{ book.name | titlecase }} by {{ book.author | titlecase }}
+  </p>
+  <p class="currency">{{ book.amount | currency: "EUR" }}</p>
+  <button>Add to Card</button>
+</li>
