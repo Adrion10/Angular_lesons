@@ -3,6 +3,7 @@ interface Book {
   name: string;
   author: string;
   image: string;
+  amount: number;
 }
 
 @Component({
@@ -17,11 +18,13 @@ export class BooksComponent implements OnInit {
       author: 'Robert C Martin',
       image:
         'https://images-na.ssl-images-amazon.com/images/W/WEBP_402378-T2/images/I/41xShlnTZTL._SX376_BO1,204,203,200_.jpg',
+      amount: 40,
     },
     {
       name: 'The Pragmatic Programmer',
       author: 'David THomas',
       image: 'https://m.media-amazon.com/images/I/518FqJvR9aL.jpg',
+      amount: 35,
     },
   ];
   // name: string = 'Clean Code';
