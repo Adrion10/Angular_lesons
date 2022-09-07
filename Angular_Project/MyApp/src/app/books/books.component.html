@@ -31,7 +31,7 @@
     <li>
       {{ i + 1 }}
       <img [src]="book.image" [alt]="book.name" width="100" />
-      {{ book.name }} by {{ book.author }}
+      {{ book.name | titlecase }} by {{ book.author | titlecase }}
     </li>
   </ng-container>
   <!-- <img [src]="src2" [alt]="name2" width="100" />
