@@ -6,7 +6,7 @@ import {
   Output,
   OnDestroy,
 } from '@angular/core';
-import { Book } from '../Types/Book';
+import { Book } from '../../Types/Book';
 
 @Component({
   selector: 'app-book',
