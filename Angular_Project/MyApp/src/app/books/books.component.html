@@ -1,36 +1,9 @@
 <h2>Programming Books List!</h2>
-<!-- <button
-  (click)="handleClick()"
-  (mouseover)="handleClick()"
-  [disabled]="isDisabled"
->
-  Show Books
-</button> -->
-<button (click)="isShowing = !isShowing">
-  Toogle
-  <!-- <ng-container *ngIf="!isShowing">Show Books</ng-container>
-  <ng-container *ngIf="isShowing">Hide Books</ng-container> -->
-</button>
-<!-- "toggleBooks()" -->
 
-<!-- <input type="text" (input)="handleInput($event)" /> -->
-<!-- <input type="text" [(ngModel)]="myName" />
-<div>{{ myName }}</div> -->
+<button (click)="isShowing = !isShowing">Toogle</button>
+
 <ul *ngIf="isShowing">
-  <!-- <li>
-    {{ name }}
-  </li>
-  <li>
-    {{ author }}
-  </li> -->
-  <!-- <img src="{{ src }}" alt="{{ name }}" width="100" />
-  <li>{{ name }} by {{ author }}</li>
-  <img src="{{ src2 }}" alt="{{ name2 }}" width="100" />
-  <li>{{ name2 }} by {{ author2 }}</li> -->
-
   <ng-container *ngFor="let singleBook of books; let i = index">
-    <app-book (bookEmitter)="addToCart($event)" [book]="singleBook"></app-book>
+    <app-book [book]="singleBook"></app-book>
   </ng-container>
-  <!-- <img [src]="src2" [alt]="name2" width="100" />
-  <li>{{ name2 }} by {{ author2 }}</li> -->
 </ul>

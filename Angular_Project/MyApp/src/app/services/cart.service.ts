@@ -1,9 +1,14 @@
 import { Injectable } from '@angular/core';
+import { Book } from '../Types/Book';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class CartService {
+  cart: Array<Book> = [];
 
-  constructor() { }
+  constructor() {}
+  add(book: Book) {
+    this.cart.push(book);
+  }
 }

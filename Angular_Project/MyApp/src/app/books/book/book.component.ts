@@ -6,6 +6,7 @@ import {
   Output,
   OnDestroy,
 } from '@angular/core';
+import { CartService } from 'src/app/services/cart.service';
 import { Book } from '../../Types/Book';
 
 @Component({
@@ -15,23 +16,13 @@ import { Book } from '../../Types/Book';
 })
 export class BookComponent implements OnInit, OnDestroy {
   @Input() book: Book = {} as Book;
-  @Output() bookEmitter = new EventEmitter<Book>();
 
-  // myInterval: any = null;
+  constructor(private cartService: CartService) {}
 
-  constructor() {}
+  ngOnInit(): void {}
+  ngOnDestroy(): void {}
 
-  ngOnInit(): void {
-    // this.myInterval = setInterval(() => {
-    //   console.log('Hello');
-    // }, 1000);
-  }
-  ngOnDestroy(): void {
-    // clearInterval(this.myInterval);
-    // console.log({ onDestroy: 'onDestroy' });
-  }
-
-  addToCart() {
-    this.bookEmitter.emit(this.book);
+  addToCart(): void {
+    this.cartService.add(this.book);
   }
 }
