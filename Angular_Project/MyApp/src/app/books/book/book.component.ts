@@ -6,7 +6,7 @@ import {
   Output,
   OnDestroy,
 } from '@angular/core';
-import { CartService } from 'src/app/services/cart.service';
+import { CartService } from 'src/app/cart/cart.service';
 import { Book } from '../../Types/Book';
 
 @Component({
