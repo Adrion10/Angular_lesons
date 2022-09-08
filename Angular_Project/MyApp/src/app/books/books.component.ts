@@ -22,7 +22,7 @@ export class BooksComponent implements OnInit {
   // src2: string = 'https://m.media-amazon.com/images/I/518FqJvR9aL.jpg';
 
   // isDisabled: boolean = false;
-  card: Book[] = [];
+  cart: Book[] = [];
 
   isShowing: boolean = true;
 
@@ -30,7 +30,7 @@ export class BooksComponent implements OnInit {
     this.books = this.booksService.getBooks();
   }
 
-  addToCard(book: Book) {
+  addToCart(book: Book) {
     console.log(book);
   }
 
