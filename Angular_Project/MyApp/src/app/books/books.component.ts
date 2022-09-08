@@ -10,11 +10,7 @@ import { BooksService } from './books.service';
 export class BooksComponent implements OnInit {
   books: Book[] = [];
 
-  private booksService: BooksService;
-
-  constructor() {
-    this.booksService = new BooksService();
-  }
+  constructor(private booksService: BooksService) {}
 
   // name: string = 'Clean Code';
   // author: string = 'Robert C Martin';
