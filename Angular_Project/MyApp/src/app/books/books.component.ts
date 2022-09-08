@@ -46,13 +46,19 @@ export class BooksComponent implements OnInit {
 
   // isDisabled: boolean = false;
   card: Book[] = [];
+
+  isShowing: boolean = true;
+  constructor() {
+    console.log({ constructor: 'constructor' });
+  }
+
+  ngOnInit(): void {
+    console.log({ onInit: 'OnInIt' });
+  }
+
   addToCard(book: Book) {
     console.log(book);
   }
-  isShowing: boolean = true;
-  constructor() {}
-
-  ngOnInit(): void {}
 
   // handleClick() {
   //   // alert('I¸am working');
