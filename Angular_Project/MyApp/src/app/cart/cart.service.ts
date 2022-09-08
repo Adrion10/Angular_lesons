@@ -12,4 +12,7 @@ export class CartService {
     console.log(book);
     this.cart.push(book);
   }
+  get() {
+    return this.cart;
+  }
 }

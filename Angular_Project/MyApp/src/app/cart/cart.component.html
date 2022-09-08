@@ -1,1 +1,3 @@
-<p>cart works!</p>
+<h1>Your Cart</h1>
+<div *ngIf="getCart().length > 0"></div>
+<div *ngIf="getCart().length == 0">no Books in your cart</div>
