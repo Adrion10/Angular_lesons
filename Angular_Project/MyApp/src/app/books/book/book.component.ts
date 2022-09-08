@@ -16,13 +16,19 @@ import { Book } from '../../Types/Book';
 })
 export class BookComponent implements OnInit, OnDestroy {
   @Input() book: Book = {} as Book;
+  isInCart: boolean = false;
 
   constructor(private cartService: CartService) {}
 
   ngOnInit(): void {}
   ngOnDestroy(): void {}
 
-  addToCart(): void {
+  addToCart() {
+    this.isInCart = true;
     this.cartService.add(this.book);
+  }
+  removeFromCart() {
+    this.isInCart = false;
+    this.cartService.remove(this.book);
   }
 }

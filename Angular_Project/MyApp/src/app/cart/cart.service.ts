@@ -15,4 +15,7 @@ export class CartService {
   get() {
     return this.cart;
   }
+  remove(book: Book) {
+    return (this.cart = this.cart.filter((b) => b !== book));
+  }
 }
