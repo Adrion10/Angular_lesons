@@ -8,9 +8,9 @@
         id="email"
         class="p-2 rounded w-full border text-sm"
         placeholder="Email Address"
-        [(ngModel)]="email"
+        [(ngModel)]="form.email"
+        name="email"
       />
-      {{ email }}
     </div>
     <div class="my-5 w-full">
       <label for="passward">Password</label>
@@ -19,6 +19,8 @@
         id="passward"
         class="p-2 rounded w-full border"
         placeholder="Password"
+        [(ngModel)]="form.password"
+        name="password"
       />
     </div>
     <div class="my-5 w-full">
