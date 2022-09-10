@@ -1,5 +1,5 @@
-<div class="flex h-screen justify-center">
-  <form class="p-4 rounded-lg border m-auto w-1/3">
+<div class="flex justify-center">
+  <form (ngSubmit)="submit()" class="p-4 mt-20 rounded-lg border m-auto w-1/3">
     <h1 class="text-center text-xl">Register</h1>
     <div class="my-5 w-full">
       <label for="email">Email</label>
@@ -8,6 +8,8 @@
         id="email"
         class="p-2 rounded w-full border"
         placeholder="Email Address"
+        [(ngModel)]="form.email"
+        name="email"
       />
     </div>
     <div class="my-5 w-full">
@@ -17,6 +19,8 @@
         id="passward"
         class="p-2 rounded w-full border"
         placeholder="Password"
+        [(ngModel)]="form.password"
+        name="password"
       />
     </div>
     <div class="my-5 w-full">

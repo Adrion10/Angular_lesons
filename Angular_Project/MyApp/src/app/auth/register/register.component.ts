@@ -1,15 +1,21 @@
 import { Component, OnInit } from '@angular/core';
+import { LoginForm } from 'src/app/Types/Autj';
 
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css']
+  styleUrls: ['./register.component.css'],
 })
 export class RegisterComponent implements OnInit {
+  form: LoginForm = {
+    email: '',
+    password: '',
+  };
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+  submit() {
+    console.log(this.form);
   }
-
 }
