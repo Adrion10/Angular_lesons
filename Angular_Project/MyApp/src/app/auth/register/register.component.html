@@ -33,7 +33,7 @@
         required
       />
       <div
-        [hidden]="password.valid"
+        *ngIf="password.invalid && (password.dirty || password.touched)"
         class="p-2 bg-red-300 text-red-800 rounded"
       >
         Password field must be valid
