@@ -34,13 +34,15 @@
       </div>
     </div>
     <div class="my-5 w-full">
-      <label for="passward"> Confirm Password</label>
+      <label for="confirm_password"> Confirm Password</label>
       <input
         type="password"
         id="passward"
         class="p-2 rounded w-full border"
         placeholder=" Confirm Password"
-        #Confirmpassword="ngModel"
+        [(ngModel)]="form.confirm_password"
+        name="confirm_password"
+        #confirm_password="ngModel"
         required
       />
       <div [hidden]="email.valid" class="p-2 bg-red-300 text-red-800 rounded">

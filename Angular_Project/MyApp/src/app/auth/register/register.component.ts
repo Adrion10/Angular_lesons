@@ -10,6 +10,7 @@ export class RegisterComponent implements OnInit {
   form: LoginForm = {
     email: '',
     password: '',
+    confirm_password: '',
   };
 
   constructor() {}
