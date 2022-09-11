@@ -11,9 +11,10 @@
         [(ngModel)]="form.email"
         name="email"
         #email="ngModel"
+        required
       />
     </div>
-    <div class="p-4 bg-red-300 text-red-800 rounded">
+    <div [hidden]="email.valid" class="p-2 bg-red-300 text-red-800 rounded">
       Email field must be valid
     </div>
     <div class="my-5 w-full">
