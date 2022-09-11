@@ -29,7 +29,10 @@
         #password="ngModel"
         required
       />
-      <div [hidden]="email.valid" class="p-2 bg-red-300 text-red-800 rounded">
+      <div
+        [hidden]="password.valid"
+        class="p-2 bg-red-300 text-red-800 rounded"
+      >
         Password field must be valid
       </div>
     </div>
@@ -45,7 +48,10 @@
         #confirm_password="ngModel"
         required
       />
-      <div [hidden]="email.valid" class="p-2 bg-red-300 text-red-800 rounded">
+      <div
+        [hidden]="confirm_password.valid"
+        class="p-2 bg-red-300 text-red-800 rounded"
+      >
         Confirm Password field must be valid
       </div>
     </div>
