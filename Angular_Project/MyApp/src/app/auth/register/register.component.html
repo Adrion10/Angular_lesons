@@ -52,7 +52,10 @@
         required
       />
       <div
-        [hidden]="confirm_password.valid"
+        *ngIf="
+          confirm_password.invalid &&
+          (confirm_password.dirty || confirm_password.touched)
+        "
         class="p-2 bg-red-300 text-red-800 rounded"
       >
         Confirm Password field must be valid
