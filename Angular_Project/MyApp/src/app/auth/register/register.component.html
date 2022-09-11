@@ -68,6 +68,7 @@
     <div class="my-5 w-full">
       <input
         type="submit"
+        [disabled]="myForm.form.invalid"
         class="p-2 w-full bg-purple-700 text-white hover:bg-purple-900"
       />
     </div>
