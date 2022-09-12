@@ -20,6 +20,7 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {}
 
   submit() {
+    if (this.isLoading) return;
     this.isLoading = true;
 
     const auth = getAuth();
