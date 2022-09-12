@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { LoginForm } from 'src/app/Types/Autj';
+import { RegisterForm } from 'src/app/Types/Autj';
+import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
 
 @Component({
   selector: 'app-register',
@@ -7,16 +8,32 @@ import { LoginForm } from 'src/app/Types/Autj';
   styleUrls: ['./register.component.css'],
 })
 export class RegisterComponent implements OnInit {
-  form: LoginForm = {
+  form: RegisterForm = {
     email: '',
     password: '',
     confirm_password: '',
   };
+  passwordMatched: boolean = true;
 
   constructor() {}
 
   ngOnInit(): void {}
   submit() {
-    console.log(this.form);
+    if (this.form.password !== this.form.password) {
+      this.passwordMatched = false;
+    }
+
+    const auth = getAuth();
+    createUserWithEmailAndPassword(auth, this.form.email, this.form.password)
+      .then((userCredential) => {
+        // Signed in
+        const user = userCredential.user;
+        // ...
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        // ..
+      });
   }
 }
