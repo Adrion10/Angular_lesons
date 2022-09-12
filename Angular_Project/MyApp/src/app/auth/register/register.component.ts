@@ -21,19 +21,17 @@ export class RegisterComponent implements OnInit {
   submit() {
     if (this.form.password !== this.form.password) {
       this.passwordMatched = false;
+      return;
     }
 
     const auth = getAuth();
     createUserWithEmailAndPassword(auth, this.form.email, this.form.password)
       .then((userCredential) => {
-        // Signed in
-        const user = userCredential.user;
-        // ...
+        console.log(userCredential);
       })
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
-        // ..
       });
   }
 }
