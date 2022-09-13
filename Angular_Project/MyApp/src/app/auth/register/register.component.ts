@@ -13,12 +13,20 @@ export class RegisterComponent implements OnInit {
     password: '',
     confirm_password: '',
   };
+
   passwordMatched: boolean = true;
+
+  isLoading: boolean = false;
 
   constructor() {}
 
   ngOnInit(): void {}
+
   submit() {
+    if (this.isLoading) return;
+
+    this.isLoading = true;
+
     if (this.form.password !== this.form.password) {
       this.passwordMatched = false;
       return;
@@ -32,6 +40,7 @@ export class RegisterComponent implements OnInit {
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
-      });
+      })
+      .finally(() => (this.isLoading = false));
   }
 }
