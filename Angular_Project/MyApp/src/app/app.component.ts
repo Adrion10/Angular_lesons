@@ -8,6 +8,7 @@ import { firebaseConfig } from './firebase.config';
   styleUrls: ['app.component.css'],
 })
 export class AppComponent implements OnInit {
+  isAuthenticated: any;
   ngOnInit(): void {
     initializeApp(firebaseConfig);
   }
